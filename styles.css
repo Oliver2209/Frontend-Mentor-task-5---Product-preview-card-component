@@ -87,6 +87,10 @@ article .main-img {
     object-fit: contain;
 }
 
+article .main-img-desktop {
+    display: none;
+}
+
 article .product-details {
     margin: 35px;
 }
@@ -105,4 +109,43 @@ p {
 
 h1 {
     line-height: 1;
+}
+
+@media (min-width: 880px) {
+
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    article {
+        width: min(100%, 600px);
+        flex-direction: row;
+        margin: 0;
+    }
+
+    article .main-img {
+        display: none;
+    }
+
+    article .main-img-desktop {
+        display: block;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 50%;
+        align-content: center;
+    }
+
+    button:hover,
+    button:focus-visible {
+        background-color: var(--clr-primary-700);
+        cursor: pointer;
+        outline: none;
+    }
+
 }
