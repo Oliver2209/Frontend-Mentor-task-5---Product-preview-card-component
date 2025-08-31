@@ -1,0 +1,108 @@
+:root {
+    --clr-primary-500: hsl(158, 36%, 37%);
+    --clr-primary-700: hsl(158, 42%, 18%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(30, 38%, 92%);
+    --clr-neutral-300: hsl(228, 12%, 48%);
+    --clr-neutral-900: hsl(212, 21%, 14%);
+
+    --ff-primary: 'Montserrat', sans-serif;
+    --ff-accent: 'Fraunces', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-size: 0.875rem;
+    color: var(--clr-neutral-300);
+    font-weight: 500;
+    background-color: var(--clr-neutral-200);
+}
+
+h1 {
+    font-family: var(--ff-accent);
+    color: var(--clr-neutral-900);
+    font-size: 2.0rem;
+    font-weight: 700;
+}
+
+.product-category {
+    text-transform: uppercase;
+    letter-spacing: .5em;
+}
+
+.price-tag {
+    position: relative;
+    font-family: var(--ff-accent);
+    color: var(--clr-primary-500);
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 100%;
+}
+
+.price-tag .orig-price {
+    position: absolute;
+    margin-left: 15px;
+    font-family: var(--ff-primary);
+    color: var(--clr-neutral-300);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+button {
+    background-color: var(--clr-primary-500);
+    border: none;
+    color: var(--clr-neutral-100);
+    font-weight: 700;
+    width: 100%;
+    padding: 1.5em 3em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+}
+
+article {
+    width: min(100%, 350px);
+    margin: 50px auto 200px;
+    background-color: var(--clr-neutral-100);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+article .main-img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: contain;
+}
+
+article .product-details {
+    margin: 35px;
+}
+
+article .product-details > .product-category,
+h1,
+article .product-details > p,
+.price-tag {
+    display: block;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+h1 {
+    line-height: 1;
+}
